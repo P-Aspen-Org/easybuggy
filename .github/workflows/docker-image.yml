@@ -32,8 +32,8 @@ jobs:
           target: 'http://localhost:8080'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-  kill:
-    runs-on: ubuntu-latest
-    steps:
-      - run: docker kill easybuggy:local
+  # kill:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: docker kill easybuggy:local
     
