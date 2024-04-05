@@ -1,4 +1,4 @@
-name: Docker Image CI
+ybugname: Docker Image CI
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
     steps:
@@ -30,11 +29,11 @@ jobs:
         uses: zaproxy/action-baseline@v0.6.1
         with:
           docker_name: 'owasp/zap2docker-stable'
-          target: 'http://easybuggy:local'
+          target: 'http://localhost:8080'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
   kill:
     runs-on: ubuntu-latest
     steps:
-      - run: docker kill
+      - run: docker kill easybuggy:local
     
