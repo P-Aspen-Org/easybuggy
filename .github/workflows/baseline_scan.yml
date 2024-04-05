@@ -15,6 +15,6 @@ jobs:
         uses: zaproxy/action-baseline@v0.6.1
         with:
           docker_name: 'owasp/zap2docker-stable'
-          target: 'http://127.0.0.1:8080'
+          target: 'http://easybuggy:8080'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
