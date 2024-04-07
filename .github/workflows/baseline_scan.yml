@@ -15,6 +15,6 @@ jobs:
         uses: zaproxy/action-baseline@v0.6.1
         with:
           docker_name: 'owasp/zap2docker-stable'
-          target: 'http://p-aspen.github.io/'
+          target: 'https://p-aspen.github.io/easybuggy/src/main/webapp/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
