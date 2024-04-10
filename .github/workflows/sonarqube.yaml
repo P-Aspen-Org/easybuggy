@@ -132,9 +132,6 @@ jobs:
     name: Sonar Scan
     runs-on: ubuntu-latest
     permissions: read-all
-    services:
-      web:
-        image: private
     steps:
       - uses: actions/checkout@v2
         with:
