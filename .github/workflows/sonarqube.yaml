@@ -158,4 +158,5 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=SONAR_TOKEN sqp_346f04ce5d580575a7f3ff3dc878cad66ec1cb1c -Dsonar.projectKey=P-Aspen-Org_easybuggy_ed517a78-cd81-44db-95ab-0b0b16591a79 -Dsonar.projectName='easybuggy'
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
+        #  -Dsonar.login=SONAR_TOKEN sqp_346f04ce5d580575a7f3ff3dc878cad66ec1cb1c -Dsonar.projectKey=P-Aspen-Org_easybuggy_ed517a78-cd81-44db-95ab-0b0b16591a79 -Dsonar.projectName='easybuggy'
