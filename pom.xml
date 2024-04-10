@@ -20,6 +20,9 @@
 		<jvm.args.gc.log.file.rotation>-XX:+UseGCLogFileRotation</jvm.args.gc.log.file.rotation>
 		<jvm.args.number.of.gc.log.files>-XX:NumberOfGCLogFiles=5</jvm.args.number.of.gc.log.files>
 		<jvm.args.gc.log.file.size>-XX:GCLogFileSize=10M</jvm.args.gc.log.file.size>
+		<!-- <sonar.organization></sonar.organization> -->
+		<sonar.host.url>https://sonarqube.paspen.com</sonar.host.url>
+		<sonar.projectKey>easybuggy</sonar.projectKey>
 	</properties>
 
 	<profiles>
@@ -152,10 +155,10 @@
 						<configuration>
 							<rules>
 								<requireMavenVersion>
-									<version>[3.0.0,)</version>
+									<version>[3.0.0,]</version>
 								</requireMavenVersion>
 								<requireJavaVersion>
-									<version>[1.6,)</version>
+									<version>[1.6,]</version>
 									<message>[ERROR] OLD JDK [${java.version}] in use.
 										EasyBuggy requires JDK 1.6 or later</message>
 								</requireJavaVersion>
@@ -299,7 +302,7 @@
 										<artifactId>
 											maven-antrun-plugin
 										</artifactId>
-										<versionRange>[1.3,)</versionRange>
+										<versionRange>[1.3,]</versionRange>
 										<goals>
 											<goal>run</goal>
 										</goals>
