@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "gitleaks": "^1.0.0"
+    "gitleaks": "^1.0.0",
+    "sonarqube": "^0.0.1"
   }
 }
