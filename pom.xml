@@ -283,6 +283,11 @@
 				</executions>
 			</plugin>
 		</plugins>
+		<plugin>
+            <groupId>org.sonarsource.scanner.maven</groupId>
+            <artifactId>sonar-maven-plugin</artifactId>
+            <version>{version}</version>
+        </plugin>
 		<pluginManagement>
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings 
