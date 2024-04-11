@@ -127,7 +127,7 @@ on:
       - master
 
 jobs:
-  build:
+  analyse:
     name: Sonar Scan
     runs-on: ubuntu-latest
     permissions: read-all
@@ -157,7 +157,9 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
 
-        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=SONAR_TOKEN -Dsonar.projectKey=P-Aspen-Org_easybuggy_ed517a78-cd81-44db-95ab-0b0b16591a79 -Dsonar.projectName='easybuggy'
+        run: mvn sonar:sonar -Dsonar.host.url=http://localhost:9000 -Dsorar.login=SONAR_TOKEN
+
+        # run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.login=SONAR_TOKEN -Dsonar.projectKey=P-Aspen-Org_easybuggy_ed517a78-cd81-44db-95ab-0b0b16591a79 -Dsonar.projectName='easybuggy'
 
 
 # on:
