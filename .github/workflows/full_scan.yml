@@ -41,8 +41,8 @@ jobs:
       - name: Download ZAP Scan Report
         uses: actions/upload-artifact@v2
         with:
-          name: zap-fullscan-report
-          path: zap-report.html
+          name: zap-fullscan_report
+          path: ${{github.workspace}}/reports/zap-fullscan_report.html
 
 # - name: Upload Test results
     #     uses: actions/upload-artifact@master

@@ -22,8 +22,8 @@ jobs:
       - name: Download ZAP Scan Report
         uses: actions/upload-artifact@v2
         with:
-          name: zap-baelinescan-report
-          path: zap-report.html
+          name: zap-baselinescan-report
+          path: ${{github.workspace}}/reports/zap-baseline_report.html
 
 
 
