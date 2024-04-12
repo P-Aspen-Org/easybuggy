@@ -38,11 +38,17 @@ jobs:
           target: 'https://p-aspen-org.github.io/easybuggy/src/main/webapp/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a '
-      - name: Upload Test results
-        uses: actions/upload-artifact@master
+      - name: Download ZAP Scan Report
+        uses: actions/upload-artifact@v2
         with:
-            name: ZAP Full Scan Report
-            path: ${{github.workspace}}/reports
+          name: zap-fullscan-report
+          path: zap-report.html
+
+# - name: Upload Test results
+    #     uses: actions/upload-artifact@master
+        # with:
+        #     name: ZAP Full Scan Report
+        #     path: ${{github.workspace}}/reports
 
 # name: Full Scan
 
