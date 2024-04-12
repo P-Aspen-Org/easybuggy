@@ -26,10 +26,3 @@ jobs:
           path: ${{github.workspace}}/reports/zap-baseline_report.html
 
 
-
-      # - name: Upload Test results
-      #   uses: actions/upload-artifact@master
-      #   with:
-      #     name: ZAP Baseline Scan Report
-      #     path: ${{github.workspace}}/reports
-
