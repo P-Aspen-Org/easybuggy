@@ -236,9 +236,9 @@
 					<execution>
 						<id>startup-uber-start</id>
 						<phase>install</phase>
-						<goals>
+						<!-- <goals>
 							<goal>exec</goal>
-						</goals>
+						</goals> -->
 						<configuration>
 							<classpathScope>test</classpathScope>
 							<executable>java</executable>
