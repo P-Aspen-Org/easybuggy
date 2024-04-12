@@ -18,8 +18,9 @@ jobs:
           target: 'https://p-aspen.github.io/easybuggy/src/main/webapp/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-      - name: Upload Test results
-        uses: actions/upload-artifact@master
-        with:
-          name: ZAP Baseline Scan Report
-          path: ${{github.workspace}}/reports
+      # - name: Upload Test results
+      #   uses: actions/upload-artifact@master
+      #   with:
+      #     name: ZAP Baseline Scan Report
+      #     path: ${{github.workspace}}/reports
+
