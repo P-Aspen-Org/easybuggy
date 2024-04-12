@@ -1,20 +1,20 @@
-name: Baseline Scan
+# name: Baseline Scan
 
-on: [push]
+# on: [push]
 
-jobs:
-  zap_scan:
-    runs-on: ubuntu-latest
-    name: ZAP Baseline Scan
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.event.pull_request.head.ref }}
-      - name: ZAP Scan
-        uses: zaproxy/action-baseline@v0.6.1
-        with:
-          docker_name: 'owasp/zap2docker-stable'
-          target: 'https://p-aspen.github.io/easybuggy/src/main/webapp/'
-          rules_file_name: '.zap/rules.tsv'
-          cmd_options: '-a'
+# jobs:
+#   zap_scan:
+#     runs-on: ubuntu-latest
+#     name: ZAP Baseline Scan
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
+#         with:
+#           ref: ${{ github.event.pull_request.head.ref }}
+#       - name: ZAP Scan
+#         uses: zaproxy/action-baseline@v0.6.1
+#         with:
+#           docker_name: 'owasp/zap2docker-stable'
+#           target: 'https://p-aspen.github.io/easybuggy/src/main/webapp/'
+#           rules_file_name: '.zap/rules.tsv'
+#           cmd_options: '-a'
