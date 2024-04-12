@@ -35,7 +35,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
-          target: 'https://p-aspen-org.github.io/easybuggy/src/main/webapp/'
+          target: 'https://p-aspen-org.github.io/easybuggy//'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a '
       - name: Download ZAP Scan Report
