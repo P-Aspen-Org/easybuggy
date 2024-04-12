@@ -22,10 +22,10 @@ jobs:
           out: 'reports' # this is the default, no need to specify unless you wish to override it
           args: >
             --enableRetired
-      - name: Download ZAP Scan Report
-        uses: actions/upload-artifact@v2
+      - name: Upload Test results
+        uses: actions/upload-artifact@master
         with:
-          name: dependency-check-report
-          path: dependency-report.html
+            name: Depcheck report
+            path: ${{github.workspace}}/reports
 
 # --failOnCVSS 7
