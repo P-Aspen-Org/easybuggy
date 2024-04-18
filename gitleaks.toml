@@ -1,0 +1,25 @@
+title = "gitleaks config"
+
+[[rules]]
+    description = "AWS Access Key"
+    id = "aws-access-key"
+    regex = '''(?:A3T[A-Z0-9]|AKIA|ASIA|ABIA|ACCA)[A-Z0-9]{16}'''
+    tags = ["key", "AWS"]
+
+[[rules]]
+    description = "AWS Secret Key"
+    id = "aws-secret-key"
+    regex = '''(?i)aws_(.{0,20})?=?.[\'\"0-9a-zA-Z\/+]{40}'''
+    tags = ["key", "AWS"]
+
+[[rules]]
+    description = "Database Username"
+    id = "DATABASE_USERNAME"
+    regex = '''(?i)db(.{0,20})?=?.[\'\"0-9a-zA-Z\/+]{40}'''
+    tags = ["username", "database"]
+
+[[rules]]
+    description = "Database Password"
+    id = "DATABASE_PASSWORD"
+    regex = '''(?i)db(.{0,20})?=?.[\'\"0-9a-zA-Z\/+]{40}'''
+    tags = ["Password", "database"]
