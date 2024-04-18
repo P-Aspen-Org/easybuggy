@@ -12,6 +12,6 @@ jobs:
           ref: ${{ github.event.pull_request.head.ref }}
       - uses: gitleaks/gitleaks-action@v2
         env:
-          GITLEAKS_CONFIG: gitleaks.toml
+          # GITLEAKS_CONFIG: gitleaks.toml
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITLEAKS_LICENSE: ${{ secrets.GITLEAKS_LICENSE}}
