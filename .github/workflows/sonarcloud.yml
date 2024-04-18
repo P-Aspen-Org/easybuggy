@@ -1,4 +1,4 @@
-name: Run SonarQube with Maven
+name: SonarCloud Scan
 
 on: push
 
@@ -13,7 +13,7 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven cloud
+    - name: Build with Maven
       run:  mvn -B verify sonar:sonar -Dsonar.projectKey=P-Aspen-Org_easybuggy -Dsonar.organization=p-aspen-org -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONARCLOUD_TOKEN
       env:
         GIT_HUB_TOKEN: ${{ secrets.GIT_HUB_TOKEN }}
